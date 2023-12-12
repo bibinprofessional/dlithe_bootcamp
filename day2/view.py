@@ -19,7 +19,6 @@ def login():
     if request.method=='POST' and 'username' in request.form and 'password' in request.form:
         username=request.form['username']
         password=request.form['password']
-
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('Select * from user where username = %s and password =%s',(username,password))
         user=cursor.fetchone()
@@ -36,6 +35,26 @@ def login():
     
     return render_template('login.html')
 
+@app.route('/register',methods=['GET','POST'])
+def register():
+    if request.method=='POST':
+        username=request.form['username']
+        password=request.form['password']
+        email=request.form['email']
+        phone=request.form['phone']
+        address=request.form['address']
+        city=request.form['city']
+        state=request.form['state']
+        country=request.form['country']
+        postcode=request.form['postcode']
+
+        cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute('insert into user (username,password,email,phone,address,city,state,country,postcode) values (%s,%s,%s,%s,%s,%s,%s,%s,%s)',(username,password,email,phone,address,city,state,country,postcode))
+        mysql.connection.commit()
+        
+        return redirect('/login')
+
+    return render_template('register.html')
 
 
 if __name__=="__main__":
