@@ -13,6 +13,32 @@ app.config['MYSQL_DB']='userprofile'
 
 mysql=MySQL(app)
 
+def check_user(user_id):
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute('Select * from user')
+    user=cursor.fetchall()
+    for i in user:
+        if i['id']==user_id:
+            return i
+        
+    else:
+        return False
+
+@app.route('/',methods=['GET'])
+def land():
+    return render_template('land.html')
+
+@app.route('/home',methods=['GET'])
+def home():
+    if "id" in session:
+        user_id=session["id"]
+        user_val=check_user(user_id)
+        if user_val==False:
+            pass
+        else:
+            message='Login successfull'
+            return render_template('home.html',message=message,user=user_val)
+
 @app.route('/login',methods=['GET','POST'])
 def login():
     message=''
@@ -27,7 +53,7 @@ def login():
             session['id']=user['id']
             session['username']=user['username']
             message='login successful'
-            return render_template('home.html',message=message)
+            return redirect(url_for('home'))
         else:
             message='invalid credentials'
             return render_template('login.html',message=message)
@@ -57,16 +83,7 @@ def check_other_user(username,phone,user_id):
     else:
         return True
     
-def check_user(user_id):
-    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    cursor.execute('Select * from user')
-    user=cursor.fetchall()
-    for i in user:
-        if i['id']==user_id:
-            return i
-        
-    else:
-        return False
+
 
 
     
@@ -125,8 +142,7 @@ def update_user(user_id):
                 cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
                 cursor.execute('update user set username=%s,password=%s,email=%s,phone=%s,address=%s,city=%s,state=%s,country=%s,postcode=%s where id=%s',(username,password,email,phone,address,city,state,country,postcode,user_id))
                 mysql.connection.commit()
-                message='update successfull'
-                return render_template('re.html',message=message)
+                return redirect('/home')
             
             else:
                 message='username or phone already exist'
@@ -145,9 +161,13 @@ def delete_user(user_id):
         cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute('delete from user where id=%s',(user_id,))
         mysql.connection.commit()
-        message='Deleted successfully'
-        return render_template('re.html',message=message)
+        session.pop("username",None)
+        return redirect('/')
 
+@app.route('/logout/<int:user_id>',methods=['GET'])
+def logout(user_id):
+    session.pop("username",None)
+    return redirect('/')
 
 if __name__=="__main__":
     app.run(host='0.0.0.0',port='85',debug=True)
