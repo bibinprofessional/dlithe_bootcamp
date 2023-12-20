@@ -1,0 +1,13 @@
+book_id,book_name,book_author,student_reg_no,student_name,student_year,student_batch,date_of_issue,return_status,date_of_return,days_overdue,fine_amount
+123,mindset,carol dweck,1232,bibin,2,CSE,2023-08-12,yes,2023-08-13,128 ,0
+433,lies my teacher told me,james loewen,2132,sree,2,MECH,2023-11-13,no,2023-11-14,35 ,35
+432,make it stick,peter c brown,1321,shridhar,4,CSE,2023-08-14,no,2023-08-15,126 ,126
+344,teaching the brain,zaretta hammond,4243,varsha,2,CIVIL,2023-10-15,yes,2023-10-16,64 ,0
+45,the brave learner,julie,2433,mohan,3,EEE,2023-08-23,yes,2023-08-24,117 ,0
+213,uncommon sense teaching,barbara oakley,4232,lalith,1,ECE,2023-11-17,no,2023-11-18,31 ,31
+435,educational psychology,jeanne ellis ormrod,5422,srujan,1,CSE,2023-09-18,no,2023-09-19,91 ,91
+455,a degree in a book,alan porter,3424,ziya,2,AEROSPACE,2023-08-19,no,2023-08-20,121 ,121
+564,learning theories,dale schunk,3564,nikhil,4,CHEMICAL,2023-09-20,yes,2023-09-21,89 ,0
+546,dumbing us down,john taylor,4356,amal,1,MECH,2023-10-21,yes,2023-10-22,58 ,0
+216,teaching from rest,sarah,3459,athira,3,CIVIL,2023-09-22,no,2023-09-23,87 ,87
+234,onward,elena,3454,sharmila,2,EEE,2023-11-23,no,2023-11-24,25 ,25

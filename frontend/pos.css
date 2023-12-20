@@ -1,0 +1,29 @@
+#con {
+    width: 300px;
+    margin: 20px;
+}
+
+#p1 {
+    background-color: aqua;
+    position: relative;
+}
+
+#p2 {
+    background-color: antiquewhite;
+    position: absolute;
+}
+
+#p3 {
+    background-color: blue;
+    position: fixed;
+}
+
+#p4 {
+    background-color: brown;
+    position: static;
+}
+
+#p5 {
+    background-color: burlywood;
+    position: sticky;
+}

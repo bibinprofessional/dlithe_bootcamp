@@ -1,0 +1,20 @@
+.container {
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+
+}
+
+
+
+.flex_container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    left: 120px;
+    border: 2px dashed rgb(6, 0, 128);
+}
+
+#color_con {
+    background-color: aquamarine;
+}
