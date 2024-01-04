@@ -49,3 +49,21 @@ for i in range(len(l7)):
     l7[i]=l7[i]%5
 
 print(l7)
+
+# create a list list comprehension 
+l8=[i for i in range(10)]
+print(l8)
+
+
+# create a list of squared list using list comprehension
+l9=[i*i for i in l8]
+print(l9)
+
+
+# create a list with only even number
+l10=[i for i in l8 if i%2==0]
+print(l10)
+
+# even and odd
+l11=['even' if i%2==0 else 'odd' for i in l8]
+print(l11)

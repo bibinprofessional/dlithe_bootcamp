@@ -1,0 +1,33 @@
+{
+    "company1": [
+        {
+            "id": 101,
+            "name": "bibin",
+            "age": 23
+        },
+        {
+            "id": 102,
+            "name": "subin",
+            "age": 21
+        }
+    ],
+    "company2": [
+        {
+            "id": 103,
+            "name": "rajan",
+            "age": 27
+        }
+    ],
+    "company3": [
+        {
+            "id": 105,
+            "name": "srujan",
+            "age": 25
+        },
+        {
+            "id": 106,
+            "name": "nikhil",
+            "age": 22
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "admin_data": [
+        {
+            "name": "admin",
+            "email": "admin@gmail.com",
+            "password": "admin@123"
+        }
+    ],
+    "user_data": [
+        {
+            "name": "bibin",
+            "dob": "2000-02-29",
+            "email": "b@g.com",
+            "password": "12341234"
+        },
+        {
+            "name": "subin",
+            "dob": "2002-02-11",
+            "email": "s@g.com",
+            "password": "12341234"
+        },
+        {
+            "name": "rajan",
+            "dob": "1980-12-12",
+            "email": "r@g.com",
+            "password": "12341234"
+        },
+        {
+            "name": "asds",
+            "dob": "2000-02-29",
+            "email": "bibin@gmail.com",
+            "password": "12341234"
+        }
+    ]
+}

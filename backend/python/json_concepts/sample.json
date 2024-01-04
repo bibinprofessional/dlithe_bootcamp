@@ -1,0 +1,14 @@
+{
+    "company3": [
+        {
+            "id": 105,
+            "name": "srujan",
+            "age": 25
+        },
+        {
+            "id": 106,
+            "name": "nikhil",
+            "age": 22
+        }
+    ]
+}
