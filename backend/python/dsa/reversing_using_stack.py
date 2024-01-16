@@ -1,0 +1,42 @@
+def createStack():
+    stack = []
+    return stack
+
+ 
+def size(stack):
+    return len(stack)
+ 
+ 
+def isEmpty(stack):
+    if size(stack) == 0:
+        return True
+
+ 
+def push(stack, item):
+    stack.append(item)
+ 
+ 
+def pop(stack):
+    if isEmpty(stack):
+        return
+    return stack.pop()
+ 
+ 
+def reverse(string):
+    n = len(string)
+ 
+    stack = createStack()
+    for i in range(0, n, 1):
+        push(stack, string[i])
+
+    rev_string=''
+
+    for i in range(0, n, 1):
+        rev_string += pop(stack)
+ 
+    return rev_string
+ 
+ 
+string=input('enter a string : ')
+reversed_string = reverse(string)
+print(reversed_string)

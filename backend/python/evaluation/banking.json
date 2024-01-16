@@ -11,7 +11,13 @@
             "name": "bibin",
             "dob": "2000-02-29",
             "email": "b@g.com",
-            "password": "12341234"
+            "password": "12341234",
+            "banking": {
+                "acc_name": "bibin",
+                "acc_no": "1000cbank1000",
+                "acc_bal": "2900",
+                "transaction_pin": "1234"
+            }
         },
         {
             "name": "subin",
@@ -36,6 +42,24 @@
             "dob": "2000-12-29",
             "email": "nihkil@g.com",
             "password": "12341234"
+        },
+        {
+            "name": "nir",
+            "dob": "2002-02-20",
+            "email": "nir@g.com",
+            "password": "12341234"
+        },
+        {
+            "name": "das",
+            "dob": "2004-02-29",
+            "email": "das@g.com",
+            "password": "11111111",
+            "banking": {
+                "acc_name": "das",
+                "acc_no": "1000cbank3142",
+                "acc_bal": "0",
+                "transaction_pin": "1234"
+            }
         }
     ]
 }
